@@ -6,6 +6,7 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
+  margin: 20px;
 `;
 
 const SubLayout = styled.div`

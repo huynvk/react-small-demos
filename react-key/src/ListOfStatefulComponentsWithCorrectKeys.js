@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { Item, getColor } from './Item';
+import { getColor } from './utils';
 
 const ChildItem = ({ value, onDelete, ...rest }) => {
   const [colorIndex, setColorIndex] = useState(0);
 
   return (
-    <Item style={{ backgroundColor: `${getColor(colorIndex)}` }} {...rest}>
+    <p style={{ backgroundColor: `${getColor(colorIndex)}` }} {...rest}>
       <span onClick={() => setColorIndex(colorIndex + 1)}>{value}</span>
       <button onClick={onDelete}>Delete</button>
-    </Item>
+    </p>
   );
 };
 

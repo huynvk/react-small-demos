@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Item, getColor } from './Item';
+import { getColor } from './utils';
 
 export const ListOfStatelessComponents = () => {
   const [values, setValues] = useState([
@@ -40,13 +40,13 @@ export const ListOfStatelessComponents = () => {
   return (
     <>
       {values.map((value, index) => (
-        <Item
+        <p
           key={index}
           style={{ backgroundColor: `${getColor(value.colorIndex)}` }}
         >
           <span onClick={() => countClick(index)}>{value.name}</span>
           <button onClick={() => del(index)}>Delete</button>
-        </Item>
+        </p>
       ))}
     </>
   );

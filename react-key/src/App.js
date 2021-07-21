@@ -19,6 +19,25 @@ const SubLayout = styled.div`
   button {
     width: 100px;
   }
+
+  div {
+    p {
+      height: 40px;
+      line-height: 40px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      padding-left: 10px;
+      border: 1px solid black;
+      color: black;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      span {
+        flex: 1;
+      }
+    }
+  }
 `;
 
 function App() {
@@ -50,7 +69,7 @@ function App() {
       <SubLayout>
         <h1>Stateful Items + Correct Key</h1>
         <p>
-          When items in list are statefule components, we should use its unique
+          When items in list are stateful components, we should use its unique
           property for key, or generate a unique one if the data itself doesn't
           have any candidate
         </p>
